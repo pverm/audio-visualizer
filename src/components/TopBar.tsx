@@ -1,15 +1,17 @@
 import { faPlay, faPause, faFile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState, useRef } from "react";
+import { AudioEffect } from "../model/audio-effect";
 import VolumeSlider from "./VolumeSlider";
 
 interface TopBarProps {
     audioRef: React.RefObject<HTMLAudioElement>;
+    audioEffect?: AudioEffect;
     onFileChange: (file: File) => void;
     fileName?: string;
 }
 
-const TopBar = ({audioRef, onFileChange, fileName}: TopBarProps) => {
+const TopBar = ({audioRef, onFileChange, fileName, audioEffect}: TopBarProps) => {
     const [playing, setPlaying] = useState<boolean>(false);
     const [volume, setVolume] = useState<number>(0.5);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -21,6 +23,8 @@ const TopBar = ({audioRef, onFileChange, fileName}: TopBarProps) => {
             audio.pause();
             setPlaying(false);
         } else {
+            console.log("RESUME: ", audioEffect)
+            audioEffect?.resume();
             audio.play();
             setPlaying(true);
         }

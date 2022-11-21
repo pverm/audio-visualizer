@@ -25,6 +25,10 @@ export class AudioPlayer {
         }
     }
 
+    resume() {
+        this.audioContext.resume();
+    }
+
     getSamples(): number[] {
         if (!this.initialized) return [];
         this.analyser!.getByteTimeDomainData(this.data!);

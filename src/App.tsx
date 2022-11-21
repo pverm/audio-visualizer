@@ -50,7 +50,7 @@ const App = () => {
 
     return (
         <div className="App">
-            <TopBar audioRef={audioRef} onFileChange={onFileChange} fileName={audioFile}/>
+            <TopBar audioRef={audioRef} onFileChange={onFileChange} fileName={audioFile} audioEffect={audioEffect}/>
             <audio ref={audioRef} id="audio" src="./kampfkraft_und_wendigkeit.mp3"></audio>
             <img src="./headphones.svg" alt="headphones" id="headphones"/>
             <div>

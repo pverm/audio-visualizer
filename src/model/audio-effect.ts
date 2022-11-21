@@ -24,6 +24,10 @@ export class AudioEffect {
         await this.player.init();
     }
 
+    resume() {
+        this.player.resume();
+    }
+
     createBars(): Array<Bar> {
         const bars = [];
         for (let i=0; i<this.fftSize/2; i++) {
