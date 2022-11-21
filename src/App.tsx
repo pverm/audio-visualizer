@@ -51,7 +51,7 @@ const App = () => {
     return (
         <div className="App">
             <TopBar audioRef={audioRef} onFileChange={onFileChange} fileName={audioFile}/>
-            <audio ref={audioRef} id="audio" src="./Jorgenson - Gothic 1 - Kampfkraft und Wendigkeit (Cor Angar)"></audio>
+            <audio ref={audioRef} id="audio" src="./kampfkraft_und_wendigkeit.mp3"></audio>
             <img src="./headphones.svg" alt="headphones" id="headphones"/>
             <div>
                 <canvas ref={canvasRef}/>
