@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/audio-visualizer/static/css/main.9b9c8f24.css",
+    "main.js": "/audio-visualizer/static/js/main.67b35922.js",
+    "index.html": "/audio-visualizer/index.html",
+    "main.9b9c8f24.css.map": "/audio-visualizer/static/css/main.9b9c8f24.css.map",
+    "main.67b35922.js.map": "/audio-visualizer/static/js/main.67b35922.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b9c8f24.css",
+    "static/js/main.67b35922.js"
+  ]
+}
